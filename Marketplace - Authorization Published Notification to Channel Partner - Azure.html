@@ -221,14 +221,21 @@
         font-size: 16px;
         line-height: 22px;
         margin-bottom: 8px;
-        color: #21233A;">Hello {{#if account_details_contact_person_first_name}}<span>{{account_details_contact_person_first_name}}</span>{{else}}<span>Customer</span>{{/if}},</p>
+        color: #21233A;">Hello 
+  {{#if authorization_details_customer_name}}
+    <span>{{authorization_details_customer_name}}</span>
+  {{else if account_details_contact_person_first_name}}
+    <span>{{account_details_contact_person_first_name}}</span>
+  {{else}}
+    <span>Customer</span>
+  {{/if}},</p>
                                         <p style="font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
         color: #21233A;">
-                                           We’re excited to inform you that a Resale Authorization has been created for you on AWS Marketplace! Please find the details below:
+                                          We’re excited to inform you that a Multiparty Private Offer has been created for you on Azure Marketplace! Please find the details below:
                                         </p>
                                     </td>
                                 </tr>
@@ -250,7 +257,7 @@ font-weight: 700;
 font-size: 16px;
 line-height: 22px;
 text-align: left;">
-                                                                Authorization Details 
+                                                             Multiparty Private Offer Details 
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -264,7 +271,7 @@ text-align: left;">
         font-size: 14px;
         line-height: 19px;
         word-wrap: break-word;">
-                                                                Authorization Name:
+                                                         Multiparty Private Offer Name :
                                                             </td>
                                                             <td class="value" valign="top" style="max-width: 492px;
         font-weight: 400;
@@ -307,7 +314,7 @@ padding: 8px 12px;
 font-size: 14px;
 line-height: 19px;
 word-wrap: break-word;" valign="top">
-                                                             {{account_details_contact_person_first_name}}
+                                                             {{created_by_person_name}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -329,7 +336,7 @@ border-bottom: 1px solid #EAE8F0;
 font-size: 14px;
 line-height: 19px;
 word-wrap: break-word;" valign="top">
-                                                                {{authorization_details_customer_name}}
+                                                                {{account_details_account_name}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -399,6 +406,7 @@ word-wrap: break-word;" valign="top">
                                                                 {{authorization_details_authorization_link}}
                                                             </td>
                                                         </tr>
+                                                            
                                                      <tr>
                                                           <td class="label" style="font-weight: 400;
 color: #636480;
@@ -458,17 +466,16 @@ word-wrap: break-word;" valign="top">
     <td class="padded-l padded-r padded-t padded-b" style="padding-top: 16px; padding-bottom: 16px; padding-left: 24px; padding-right: 24px;">
         <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0px; color: #21233A;">
             <strong>Deadline Approaching:</strong> <br>
-            Please note that this Resale Authorization is valid only until {{authorization_details_availability_end_date}}. After this date, the authorization will no longer be available. We encourage you to take advantage of it before it expires.
+            Please note that this Multiparty Private Offer is valid only until {{authorization_details_availability_end_date}}. After this date, the Multiparty Private Offer will no longer be available. We encourage you to take advantage of it before it expires.
         </p>
     </td>
 {{/if}}
 <tr>
     <td class="padded-l padded-r padded-t padded-b" style="padding-top: 8px; padding-bottom: 16px; padding-left: 24px; padding-right: 24px;">
         <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 24px; color: #21233A;">
-            <strong>How to Create a Private Offer from This Resale Authorization</strong><br>
-            1. Log onto <a href="https://aws.amazon.com/marketplace/management/homepage" style="color: #2E3BCD; text-decoration: none;">AWS Marketplace Management Portal</a>, navigate to the Partners tab and find the Resale Authorization under “Selling authorizations received” OR click <a href="{{authorization_details_authorization_link}}" style="color: #2E3BCD; text-decoration: none;">here</a>.<br>
-            2. Click on “Create Offer.”<br>
-            3. Complete the details, review, and publish your offer.
+            <strong>How to add your updates to this Multiparty Private Offer and extend to the end customer:</strong><br>
+            1. Log onto the Microsoft Partner Center’s <a href="https://partner.microsoft.com/en-us/dashboard/commercial-marketplace/private-offers?pivot=MPPOPromotion" style="color: #2E3BCD; text-decoration: none;">Private Offers portal</a> OR click <a href="{{authorization_details_authorization_link}}" style="color: #2E3BCD; text-decoration: none;">here</a>.<br>
+            2. Complete the details, review, and publish your Multiparty Private Offer.<br>
         </p>
     </td>
 </tr>

@@ -374,7 +374,8 @@ padding: 8px 12px;
 font-size: 14px;
 line-height: 19px;
 word-wrap: break-word;" valign="top">
-                                                                {{authorization_details_product_name}}
+                                               {{#each azure_authorization_details_azure_listing_names}}
+                                                            {{this}}{{#unless @last}}, {{/unless}} {{/each}}
                                                             </td>
                                                         </tr>
                                                         <tr>

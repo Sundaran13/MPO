@@ -381,7 +381,8 @@ padding: 8px 12px;
 font-size: 14px;
 line-height: 19px;
 word-wrap: break-word;" valign="top">
-                                                                {{azure_authorization_details_azure_listing_names}}
+                                                                 {{#each azure_authorization_details_azure_listing_names}}
+                                                            {{this}}{{#unless @last}}, {{/unless}} {{/each}} 
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -403,7 +404,7 @@ padding: 8px 12px;
 font-size: 14px;
 line-height: 19px;
 word-wrap: break-word;" valign="top">
-                                                                {{authorization_details_authorization_link}}
+                                                                {{azure_authorization_details_azure_authorization_link}}
                                                             </td>
                                                         </tr>
                                                             
@@ -474,7 +475,7 @@ word-wrap: break-word;" valign="top">
     <td class="padded-l padded-r padded-t padded-b" style="padding-top: 8px; padding-bottom: 16px; padding-left: 24px; padding-right: 24px;">
         <p style="font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 24px; color: #21233A;">
             <strong>How to add your updates to this Multiparty Private Offer and extend to the end customer:</strong><br>
-            1. Log onto the Microsoft Partner Center’s <a href="https://partner.microsoft.com/en-us/dashboard/commercial-marketplace/private-offers?pivot=MPPOPromotion" style="color: #2E3BCD; text-decoration: none;">Private Offers portal</a> OR click <a href="{{authorization_details_authorization_link}}" style="color: #2E3BCD; text-decoration: none;">here</a>.<br>
+            1. Log onto the Microsoft Partner Center’s <a href="https://partner.microsoft.com/en-us/dashboard/commercial-marketplace/private-offers?pivot=MPPOPromotion" style="color: #2E3BCD; text-decoration: none;">Private Offers portal</a> OR click <a href="{{azure_authorization_details_azure_authorization_link}}" style="color: #2E3BCD; text-decoration: none;">here</a>.<br>
             2. Complete the details, review, and publish your Multiparty Private Offer.<br>
         </p>
     </td>

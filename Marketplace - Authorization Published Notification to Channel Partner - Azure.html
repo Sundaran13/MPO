@@ -293,7 +293,7 @@ text-align: left;">
                                                             </td>
                                                         </tr>
 
-
+                                    {{#if created_by_person_name}}
 
                                                         <tr>
                                                             <td class="label" valign="top" style="font-weight: 400;
@@ -317,6 +317,8 @@ word-wrap: break-word;" valign="top">
                                                              {{created_by_person_name}}
                                                             </td>
                                                         </tr>
+                                                {{/if}}
+                                                {{#if authorization_details_customer_name}}
                                                         <tr>
                                                             <td class="label" style="font-weight: 400;
 color: #636480;
@@ -339,6 +341,7 @@ word-wrap: break-word;" valign="top">
                                                                 {{authorization_details_customer_name}}
                                                             </td>
                                                         </tr>
+                                                    {{/if}}
                                                         <tr>
                                                             <td class="label" style="font-weight: 400;
         color: #636480;
